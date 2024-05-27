@@ -1,10 +1,11 @@
-local settings = vim.json.decode(io.open(".vscode/settings.json","r"):read("a"))
+local settings = vim.json.decode(io.open(".vscode/settings.json", "r"):read("a"))
 
-require("luau-lsp").config {
-  sourcemap = {
-    enabled = false,
-  },
-  settings = {
-    ["luau-lsp"] = settings["luau-lsp"]
-  }
-}
+-- make sure you enabled vim.o.enabled in your neovim config
+require("luau-lsp").config({
+	sourcemap = {
+		enabled = false,
+	},
+	settings = {
+		["luau-lsp"] = settings["luau-lsp"],
+	},
+})
