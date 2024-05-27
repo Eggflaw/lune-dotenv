@@ -1,0 +1,3 @@
+[submodule "submodules/util.luau"]
+	path = submodules/util.luau
+	url = https://github.com/lukadev-0/util.luau.git

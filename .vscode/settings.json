@@ -1,6 +1,7 @@
 {
   "luau-lsp.require.mode": "relativeToFile",
   "luau-lsp.require.directoryAliases": {
-    "@lune/": "~/.lune/.typedefs/0.8.4/"
+    "@lune/": "~/.lune/.typedefs/0.8.4/",
+    "@testing/": "submodules/util.luau/.lune/test-lib/"
   }
 }
