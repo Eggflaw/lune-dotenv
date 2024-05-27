@@ -12,9 +12,9 @@ function dotenv:parse(str: string): { [string?]: string? }
 		if key and value then
 			value = value:gsub('^"(.*)"$', "%1")
 			value = value:gsub("^'(.*)'$", "%1")
-		end
 
-		env[key] = value
+			env[key] = value
+		end
 	end
 
 	return env
@@ -33,8 +33,6 @@ function dotenv:load(overwrite: boolean?, path: string?)
 			process.env[key] = value
 		end
 	end
-
-	print(process.env)
 end
 
 return dotenv
