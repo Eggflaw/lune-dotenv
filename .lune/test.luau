@@ -294,7 +294,7 @@ end
 local function printErr(err: string, traceback: string)
 	stdio.ewrite(stdio.color("red"))
 	stdio.ewrite(stdio.style("bold"))
-	stdio.ewrite(err .. "\n\n")
+	stdio.ewrite(tostring(err) .. "\n\n")
 	stdio.ewrite(stdio.style("reset"))
 	stdio.ewrite(stdio.style("dim"))
 	stdio.ewrite("[Stack Begin]\n")
