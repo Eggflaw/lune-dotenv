@@ -12,9 +12,6 @@ lune-dotenv loads environtment variables from a `.env` file and adds them into `
 
 
 ## Installation
-### Wally
-Coming soon.
-
 ### Git submodules
 ```
 git submodule add  https://github.com/Eggflaw/lune-dotenv.git
