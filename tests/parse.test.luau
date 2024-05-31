@@ -8,17 +8,17 @@ local fs = require("@lune/fs")
 local dotenv = require("../lib")
 
 local function readEnv(path)
-	local content = fs.readFile(path)
-	local env = dotenv:parse(content)
-	return env
+  local content = fs.readFile(path)
+  local env = dotenv:parse(content)
+  return env
 end
 
 describe("Multiline", function()
-	test("Normal", function()
-		local env = readEnv("tests/envs/multiline.env")
+  test("Normal", function()
+    local env = readEnv("tests/envs/multiline.env")
 
-		assertEq(env.NORMAL, "BAR\nFOO\nBAZ\n")
-		assertEq(env.TEST_2, "\nBAR\nFOO\nBAZ\n")
-		assertEq(env.WITH_ESC, 'FOO\nBAR\\"\nBAZ\n')
-	end)
+    assertEq(env.NORMAL, "BAR\nFOO\nBAZ\n")
+    assertEq(env.TEST_2, "\nBAR\nFOO\nBAZ\n")
+    assertEq(env.WITH_ESC, 'FOO\nBAR\\"\nBAZ\n')
+  end)
 end)
